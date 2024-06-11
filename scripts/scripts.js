@@ -67,12 +67,23 @@ async function loadFonts() {
 function buildAutoBlocks() {
   try {
     // TODO: add auto block, if needed
+    if (isBrowsePage()) {
+      console.log('This is how you do it');
+    }
+    console.log('It is as usual');
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('Auto Blocking failed', error);
   }
 }
-
+/**
+ * return browse page theme if its browse page otherwise undefined.
+ * theme = browse-* is set in bulk metadata for /en/browse paths.
+ */
+export function isBrowsePage() {
+  const theme = getMetadata('theme');
+  return theme.split(',').find((t) => t.toLowerCase().startsWith('browse-'));
+}
 /**
  * Decorates the main element.
  * @param {Element} main The main element
