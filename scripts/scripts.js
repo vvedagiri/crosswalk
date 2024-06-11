@@ -60,14 +60,7 @@ async function loadFonts() {
     // do nothing
   }
 }
-/**
- * return browse page theme if its browse page otherwise undefined.
- * theme = browse-* is set in bulk metadata for /en/browse paths.
- */
-export function isBrowsePage() {
-  const theme = getMetadata('theme');
-  return theme.split(',').find((t) => t.toLowerCase().startsWith('browse-'));
-}
+
 /**
  * Builds all synthetic blocks in a container element.
  * @param {Element} main The container element
@@ -75,10 +68,6 @@ export function isBrowsePage() {
 function buildAutoBlocks() {
   try {
     // TODO: add auto block, if needed
-    if (isBrowsePage()) {
-        // TODO: add auto block, if needed
-    }
-    
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('Auto Blocking failed', error);
