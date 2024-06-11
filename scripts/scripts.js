@@ -82,6 +82,7 @@ function buildAutoBlocks() {
  * theme = browse-* is set in bulk metadata for /en/browse paths.
  */
 export function isBrowsePage() {
+  console.log('Enter is Browse Page');
   const theme = getMetadata('theme');
   console.log(theme);
   return theme.split(',').find((t) => t.toLowerCase().startsWith('browse-'));
