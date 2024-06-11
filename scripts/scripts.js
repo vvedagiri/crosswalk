@@ -83,6 +83,7 @@ function buildAutoBlocks() {
  */
 export function isBrowsePage() {
   const theme = getMetadata('theme');
+  console.log(theme);
   return theme.split(',').find((t) => t.toLowerCase().startsWith('browse-'));
 }
 /**
