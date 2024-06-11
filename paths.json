@@ -1,5 +1,6 @@
 {
   "mappings": [
     "/content/crosswalk/:/"
+    "/content/crosswalk/metadata:/metadata.json"
   ]
 }
