@@ -1,5 +1,5 @@
 mountpoints:
   /:
-    url: "https://author-p136490-e1369018.adobeaemcloud.com/bin/franklin.delivery/vvedagiri/crosswalk/main"
+    url: "https://author-p136716-e1377468.adobeaemcloud.com/bin/franklin.delivery/vvedagiri/crosswalk/main"
     type: "markup"
     suffix: ".html"
